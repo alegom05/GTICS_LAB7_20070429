@@ -1,4 +1,4 @@
-package com.example.clase7gtics.controller;
+/*package com.example.clase7gtics.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,3 +11,4 @@ public class LoginController {
         return "loginWindow";
     }
 }
+*/

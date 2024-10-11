@@ -1,16 +1,9 @@
-package com.example.clase7gtics.config;
+/*package com.example.clase7gtics.config;
 
-import com.example.clase7gtics.entity.Usuario;
-import com.example.clase7gtics.repository.UsuarioRepository;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,11 +11,9 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.savedrequest.DefaultSavedRequest;
 
 import javax.sql.DataSource;
-import java.io.IOException;
 
 @Configuration
 public class WebSecurityConfig {
@@ -80,6 +71,8 @@ public class WebSecurityConfig {
             /shipper -> ruta protegida -> rol admin (oscar.diaz)
             todo lo demas (en este ejemplo, product) -> libre
          */
+
+/*
         http.authorizeHttpRequests()
                 .requestMatchers("/employee", "/employee/**").hasAnyAuthority("admin", "logistica")
                 .requestMatchers("/shipper", "/shipper/**").hasAnyAuthority("admin")
@@ -112,7 +105,7 @@ public class WebSecurityConfig {
 }
 
 
-
+*/
 
 
 

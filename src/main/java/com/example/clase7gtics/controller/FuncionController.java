@@ -1,38 +1,26 @@
-/*package com.example.clase7gtics.controller;
+package com.example.clase7gtics.controller;
 
-import com.example.clase7gtics.entity.Product;
-import com.example.clase7gtics.repository.CategoryRepository;
-import com.example.clase7gtics.repository.ProductRepository;
-import com.example.clase7gtics.repository.SupplierRepository;
-import jakarta.validation.Valid;
+import com.example.clase7gtics.repository.FuncionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.Optional;
 
 @Controller
-@RequestMapping("/product")
-public class ProductController {
+@RequestMapping("/funcion")
+public class FuncionController {
 
-    final ProductRepository productRepository;
-    final CategoryRepository categoryRepository;
-    final SupplierRepository supplierRepository;
 
-    public ProductController(ProductRepository productRepository, CategoryRepository categoryRepository, SupplierRepository supplierRepository) {
-        this.productRepository = productRepository;
-        this.categoryRepository = categoryRepository;
-        this.supplierRepository = supplierRepository;
-    }
+
+    @Autowired
+    FuncionRepository funcionRepository;
 
     @GetMapping(value = {"", "/"})
-    public String listaProductos(Model model) {
-        model.addAttribute("listaProductos", productRepository.findAll());
-        return "product/list";
+    public String listaFunciones(Model model) {
+        model.addAttribute("listaFunciones", funcionRepository.findAll());
+        return "funcion/list";
     }
-
+    /*
     @GetMapping("/new")
     public String nuevoProductoFrm(Model model, @ModelAttribute("product") Product product) {
         model.addAttribute("listaCategorias", categoryRepository.findAll());
@@ -91,6 +79,5 @@ public class ProductController {
         return "redirect:/product";
 
     }
-
+    */
 }
-*/
